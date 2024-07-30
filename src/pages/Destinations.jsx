@@ -4,6 +4,7 @@ const Destinations = () => {
   return (
     <Box p={5} maxW="var(--max-width)" mx="auto">
       <Heading as="h1" size="xl" mb={4}>Our Destinations</Heading>
+      <hr />
       <Text fontSize="lg" color="text.light" mb={6}>
         Explore the world with Indigo Airlines. We fly to numerous destinations across the globe, offering you the best in travel and comfort. Discover new places and make memories with us.
       </Text>

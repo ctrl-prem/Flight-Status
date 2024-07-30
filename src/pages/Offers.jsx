@@ -4,6 +4,7 @@ const Offers = () => {
   return (
     <Box p={5} maxW="var(--max-width)" mx="auto">
       <Heading as="h1" size="xl" mb={4}>Special Offers</Heading>
+      <hr />
       <Text fontSize="lg" color="text.light" mb={6}>
         Take advantage of our exclusive deals and discounts on flights to various destinations. Whether you&apos;re traveling for business or leisure, Indigo Airlines offers you the best rates and packages.
       </Text>
