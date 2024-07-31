@@ -1,32 +1,36 @@
-import { Box, Flex, Button, FormControl, FormLabel, Input, useColorModeValue, Heading } from '@chakra-ui/react';
-
+import { Box, Button, Flex, Input, FormLabel, FormControl, Select, Heading } from '@chakra-ui/react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const FlightStatusInquiry = () => {
-  const formBackground = useColorModeValue('gray.100', 'gray.700');
+  const [bookingClass, setBookingClass] = useState("Business Class");
 
   return (
-    <Box p={5} maxW="var(--max-width)" mx="auto">
-      <Heading as="h1" size="xl" mb={4}>Flight Status</Heading>
+    <Box>
+      <Heading p={5}>
+        Flight Status
+      </Heading>
       <hr />
-      <Box
-        p={5}
-        boxShadow="md"
-        borderRadius="md"
-        maxW="2xl"
-        mx="auto"
-        mt={10}
-        bg={formBackground}
-      >
-        <Flex mb={8} justifyContent="center" alignItems="center" wrap='wrap'>
-          <Button variant="outline" mx={2} size="lg">Economy Class</Button>
-          <Button variant="solid" mx={2} color="white" bg="teal.500" size="lg">Business Class</Button>
-          <Button variant="outline" mx={2} size="lg">First Class</Button>
+      <Box p={5} boxShadow="md" borderRadius="md" maxW="2xl" mx="auto" my={10} bg="gray.50">
+        <Flex mb={8} justifyContent="center" alignItems="center">
+          <Select
+            value={bookingClass}
+            onChange={(e) => setBookingClass(e.target.value)}
+            size="lg"
+            width="100%"
+            maxW="20rem"
+          >
+            <option value="Economy Class">Economy Class</option>
+            <option value="Business Class">Business Class</option>
+            <option value="First Class">First Class</option>
+          </Select>
         </Flex>
-        <Flex as="form" wrap="wrap" justifyContent="center" alignItems='center'>
+        <Flex as="form" wrap="wrap" justifyContent="space-around" alignItems='center'>
           <FormInput label="Flight ID" placeholder="Enter Flight ID" />
           <FormInput label="Date" placeholder="Select Travelling Date" type="date" />
-          <Button type="submit" colorScheme="teal" mx={2} size="lg" mt={[4, 4, 0]}>Search</Button>
+          <Box width={{ base: "100%", md: "auto" }} mt={{ base: 4, md: 0 }}>
+            <Button type="submit" mt={2} colorScheme="teal" size="lg" width="100%">Search</Button>
+          </Box>
         </Flex>
       </Box>
     </Box>
@@ -34,13 +38,13 @@ const FlightStatusInquiry = () => {
 };
 
 const FormInput = ({ label, placeholder, type = "text" }) => (
-  <FormControl flexBasis={["100%", "45%", "30%"]} mb={4} mx={2}>
+  <FormControl flexBasis={{ base: "100%", md: "45%", lg: "30%" }} mb={4}>
     <FormLabel>{label}</FormLabel>
     <Input type={type} placeholder={placeholder} />
   </FormControl>
 );
 
-FormInput.propTypes={
+FormInput.propTypes = {
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   type: PropTypes.string,
