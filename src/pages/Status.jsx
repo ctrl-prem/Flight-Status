@@ -13,12 +13,12 @@ const FlightStatusInquiry = () => {
         p={5}
         boxShadow="md"
         borderRadius="md"
-        maxW="xl"
+        maxW="2xl"
         mx="auto"
         mt={10}
         bg={formBackground}
       >
-        <Flex mb={4} justifyContent="center" alignItems="center">
+        <Flex mb={8} justifyContent="center" alignItems="center" wrap='wrap'>
           <Button variant="outline" mx={2} size="lg">Economy Class</Button>
           <Button variant="solid" mx={2} color="white" bg="teal.500" size="lg">Business Class</Button>
           <Button variant="outline" mx={2} size="lg">First Class</Button>
