@@ -9,7 +9,7 @@ const BestTravellers = () => {
   return (
     <Box textAlign="center" py={10}>
       <Heading as="h2" size="xl" mb={8}>Best travellers of the month</Heading>
-      <Flex wrap="wrap" justify="center" maxW="var(--max-width)" mx="auto">
+      <Flex wrap="wrap" justifyContent="space-around" maxW="var(--max-width)" mx="auto">
         <TravellerCard name="Emily Johnson" location="Dubai" imgSrc={traveller1} />
         <TravellerCard name="David Smith" location="Paris" imgSrc={traveller2} />
         <TravellerCard name="Olivia Brown" location="Singapore" imgSrc={traveller3} />

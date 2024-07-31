@@ -38,7 +38,7 @@ const NavBar = () => {
             <NavLink text="Offers" to="/offers" />
             <NavLink text="Flight Status" to="/status" />
             <NavLink text="Destinations" to="/destinations" />
-            <Button bg="teal.500" color='white' as="a" href="#" mt={4}>
+            <Button colorScheme='teal' as="a" href="#" mt={4}>
               Contact
             </Button>
           </Flex>

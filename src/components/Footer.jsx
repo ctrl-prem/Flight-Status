@@ -17,17 +17,17 @@ const Footer = () => {
         </Box>
         <Box flexBasis="45%" mb={6}>
           <Heading as="h4" size="md" mb={4}>INFORMATION</Heading>
-          <Link mb={2} display="block" to='/'>Home</Link>
-          <Link mb={2} display="block">About</Link>
-          <Link mb={2} display="block">Offers</Link>
-          <Link mb={2} display="block">Seats</Link>
-          <Link mb={2} display="block">Destinations</Link>
+          <Link mb={2} display="block" href='/'>Home</Link>
+          <Link mb={2} display="block" href='/about'>About</Link>
+          <Link mb={2} display="block" href='/offers'>Offers</Link>
+          <Link mb={2} display="block" href='/status'>Flight Status</Link>
+          <Link mb={2} display="block" href='/destinations'>Destinations</Link>
         </Box>
         <Box flexBasis="45%" mb={6}>
           <Heading as="h4" size="md" mb={4}>CONTACT</Heading>
-          <Link mb={2} display="block">Support</Link>
-          <Link mb={2} display="block">Media</Link>
-          <Link mb={2} display="block">Socials</Link>
+          <Link mb={2} display="block" href='#'>Support</Link>
+          <Link mb={2} display="block" href='#'>Media</Link>
+          <Link mb={2} display="block" href='#'>Socials</Link>
         </Box>
       </Flex>
       <Flex justify="space-between" align="center" mt={10} borderTop="1px solid rgba(255, 255, 255, 0.1)" pt={5} maxW="var(--max-width)" mx="auto" px={5} wrap="wrap">

@@ -14,7 +14,9 @@ const BookingForm = () => {
         <FormInput label="Travellers" placeholder="Add guests" type="number" />
         <FormInput label="Departure" placeholder="Add date" />
         <FormInput label="Return" placeholder="Add date" />
-        <Button type="submit" colorScheme="teal" mx={2}>Search</Button>
+        <Box width={{ base: "100%", md: "auto" }} mt={{ base: 4, md: 0 }}>
+          <Button type="submit" colorScheme="teal" width="100%">Search</Button>
+        </Box>
       </Flex>
     </Box>
   );
